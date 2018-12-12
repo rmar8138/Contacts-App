@@ -9,7 +9,7 @@ const { Contact } = require('./models/contact');
 const app = express();
 const port = process.env.PORT;
 
-mongoose.connect('mongodb://localhost:27017/Contacts-App');
+mongoose.connect(process.env.MONGODB_URI);
 
 app.use(bodyparser.json());
 
